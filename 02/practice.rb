@@ -88,6 +88,6 @@ end
 
 array_of_candidates.each do |candidate|
 	email(candidate)
-	puts "======================="
+	puts "=======================" 
 	end
 ## Your script ends here
