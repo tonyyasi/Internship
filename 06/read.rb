@@ -54,7 +54,7 @@ class Page
       	<h2> Stuff about this guy </h2>
       	<ul>
       		<li> Github username: #{user.login} </li>
-      		<li>URL:  <a href ="#{user.html_url}">#{user.html_url} </a></li>
+      		<li>URL:  <a href ="#{user.html_url}" target="_blank">#{user.html_url} </a></li>
       		<li>Hobbies: Music, programming and stuff </li>
       	</ul>
       	<p>Favorite programming languages</p>
@@ -68,11 +68,11 @@ class Page
 
       	<p>
       	<p>Follow me on twitter<p>
-      	<a href="https://twitter.com/tonyyasi"><img src="https://lh3.ggpht.com/lSLM0xhCA1RZOwaQcjhlwmsvaIQYaP3c5qbDKCgLALhydrgExnaSKZdGa8S3YtRuVA=w300" style ="width:200px;height:200px;" ></a>
+      	<a href="https://twitter.com/tonyyasi" target="_blank"><img src="https://lh3.ggpht.com/lSLM0xhCA1RZOwaQcjhlwmsvaIQYaP3c5qbDKCgLALhydrgExnaSKZdGa8S3YtRuVA=w300" style ="width:200px;height:200px;" ></a>
       	</p>
       	<p>
       	<p>Checkout Icalia</p>
-      	<a href="http://www.icalialabs.com/"><img src="https://pbs.twimg.com/profile_images/523198552063746048/BgFH_zPm_400x400.png" style="width:200px;height:200px;"></a>
+      	<a href="http://www.icalialabs.com/" target="_blank"><img src="https://pbs.twimg.com/profile_images/523198552063746048/BgFH_zPm_400x400.png" style="width:200px;height:200px;"></a>
       	</p>
       }
     end
