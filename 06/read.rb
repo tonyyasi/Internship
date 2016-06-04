@@ -40,15 +40,21 @@ require 'github/markup'
 class Page
 
   def render
-    ERB.new(File.read('./layout.erb')).result(binding)
+    ERB.new(File.read('./first_layout.erb')).result(binding)
   end
 
 
   def content
   	
-  	user = GithubUser.find("tonyyasi")
+  	 user = GithubUser.find("tonyyasi")
     render do
       %Q{
+      	<head>
+      		<p> aaaaa</p>
+      	</head>
+
+      	<body id="demo" style="display:none;">
+
       	<h1> Name: #{user.name}  </h1>
       	<img src="#{user.avatar_url}" style="width:304px;height:328px;">
       	<h2> Stuff about this guy </h2>
@@ -74,6 +80,7 @@ class Page
       	<p>Checkout Icalia</p>
       	<a href="http://www.icalialabs.com/"><img src="https://pbs.twimg.com/profile_images/523198552063746048/BgFH_zPm_400x400.png" style="width:200px;height:200px;"></a>
       	</p>
+      	</body>
       }
     end
   end
