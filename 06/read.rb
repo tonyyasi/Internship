@@ -49,11 +49,10 @@ class Page
   	 user = GithubUser.find("tonyyasi")
     render do
       %Q{
-      	<head>
-      		<p> aaaaa</p>
-      	</head>
 
-      	<body id="demo" style="display:none;">
+
+
+      	<p id="demo" style="display:none;">
 
       	<h1> Name: #{user.name}  </h1>
       	<img src="#{user.avatar_url}" style="width:304px;height:328px;">
@@ -80,7 +79,7 @@ class Page
       	<p>Checkout Icalia</p>
       	<a href="http://www.icalialabs.com/"><img src="https://pbs.twimg.com/profile_images/523198552063746048/BgFH_zPm_400x400.png" style="width:200px;height:200px;"></a>
       	</p>
-      	</body>
+      	</p>
       }
     end
   end
