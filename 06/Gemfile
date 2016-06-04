@@ -1,0 +1,8 @@
+source "https://rubygems.org"
+
+#gem "erb"
+gem "github-markup"
+gem "rack"
+gem "redcarpet"
+gem "json"
+gem "rest-client"

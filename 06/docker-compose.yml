@@ -1,0 +1,12 @@
+version: "2"
+
+services: 
+   ruby: 
+      image: ruby:2.2
+      command: rackup read.rb --host 0.0.0.0
+      entrypoint: /usr/src/app/./run
+      working_dir: /usr/src/app
+      ports:
+         - 8080:8080
+      volumes:
+         - .:/usr/src/app
