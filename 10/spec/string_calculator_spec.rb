@@ -43,6 +43,11 @@ describe "#Add" do
 
 	end
 
+	it 'returns 6 when recieves n//[***]\1***2***3 ' do
+	expect(string_calculator.add('n//[***]\1***2***3')).to eql (6)
+
+end	
+
 	
 
 
