@@ -10,7 +10,7 @@ class StringCalculator
 		arr = []
 		negatives = []
 		temporal_string = ''
-		string = string.gsub(/[\/n]/,',')
+		string = string.gsub('\n',',')
 
 		string.each_char.with_index do |char,index|
 
