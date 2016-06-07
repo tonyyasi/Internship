@@ -1,0 +1,6 @@
+source "https://rubygems.org"
+
+#gem "erb"
+gem "rack"
+gem "json"
+gem "rest-client"

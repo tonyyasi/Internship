@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="./read.css">
+	<title>Interviewers</title>
+</head>
+
+<body style="background-color:#ccefff;">
+
+	<%  @scheduler.interviewers.each do |interviewer|  %>
+
+	<p style="font-size: 20px ; font-family:Arial"> "Entrevistas de  <%= interviewer.name %> </p>
+	
+	<ol>
+		<%  interviewer.interviews.each do |interview| %>
+		<li> <%="#{interview.candidate.name} a las: #{interview.time}" %> </li>
+		<%end%>
+	</ol>
+	
+	<% end%>
+
+
+</body>
+
+</html>
