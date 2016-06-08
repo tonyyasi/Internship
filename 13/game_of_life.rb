@@ -15,7 +15,7 @@ class Game
 
 		seed.each do |cell|
 
-			cell = random
+			cell = rand(2)
 		end
 
 
