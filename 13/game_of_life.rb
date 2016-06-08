@@ -11,7 +11,12 @@ class Game
 
 	def seed_generator(n)
 
+		seed = Matrix.new(n)
 
+		seed.each do |cell|
+
+			cell = random
+		end
 
 
 	end
