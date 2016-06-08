@@ -32,7 +32,11 @@ def initialize(matrix)
 
 end
 
-def 
+def number_of_alive_neighbors(x,y,z)
+
+
+
+	end
 
 
 end
