@@ -1,13 +1,20 @@
+require 'matrix'
+
 class Game
 
 	def initialize(n)
 
 		@worlds = []
-		@seed = []
+		@seed = seed_generator
 
 	end
 
-	
+	def seed_generator(n)
+
+
+
+
+	end
 
 
 end
