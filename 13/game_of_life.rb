@@ -6,7 +6,7 @@ class Game
 
 		@worlds = []
 		@seed = seed_generator
-
+		@worlds << World.new(@seed)
 	end
 
 	def seed_generator(n)
@@ -31,6 +31,8 @@ def initialize(matrix)
 	@world = matrix
 
 end
+
+def 
 
 
 end
