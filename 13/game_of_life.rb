@@ -13,9 +13,15 @@ class Game
 
 		seed = Matrix.new(n)
 
-		seed.each do |cell|
+		seed.each do |dimension|
 
-			cell = rand(2)
+			dimension = Array.new(n)
+
+			dimension.each do |cell|
+
+				cell = rand(2)
+			end
+
 		end
 
 
