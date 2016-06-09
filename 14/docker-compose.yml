@@ -1,0 +1,8 @@
+version: "2"
+
+services: 
+   ruby: 
+      image: ruby:2.2
+      working_dir: /usr/src/app
+      volumes:
+         - .:/usr/src/app
