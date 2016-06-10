@@ -1,0 +1,12 @@
+
+<h1>All of the tweets! <%=@tweets.count%> Tweets available for you </h1>
+<%@tweets.each do |tweet|%>
+<ul>
+  <li><%= tweet.content %></li>
+  <li><%= distance_of_time_in_words(Time.now,tweet.created_at)%> ago</li>
+  <li><%= link_to "Delete awesomeness" , "/tweets/#{tweet.id}", method: :delete %></li>
+  <li><%=link_to "Show detailed view" , "tweets/#{tweet.id}"%></li>
+  <li><%=link_to "Edit tweet" , "/tweets/#{tweet.id}/edit"%></li>
+</ul>
+
+<%end%>
