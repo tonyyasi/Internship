@@ -1,12 +1,28 @@
 
-<h1>All of the tweets! <%=@tweets.count%> Tweets available for you </h1>
-<%@tweets.each do |tweet|%>
-<ul>
-  <li><%= tweet.content %></li>
-  <li><%= distance_of_time_in_words(Time.now,tweet.created_at)%> ago</li>
-  <li><%= link_to "Delete awesomeness" , "/tweets/#{tweet.id}", method: :delete %></li>
-  <li><%=link_to "Show detailed view" , "tweets/#{tweet.id}"%></li>
-  <li><%=link_to "Edit tweet" , "/tweets/#{tweet.id}/edit"%></li>
-</ul>
+<h1>All of the tweets! <span id = "tweets-count"> <%=@tweets.count%> </h1>
+
+
+<%=form_for @tweet, remote: true do |f| %>
+
+  <%=f.text_area "content" %>
+  <br>
+  <%=f.submit "Tweet"%>
+
 
 <%end%>
+
+<table id="tweets-container">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Content</th>
+      <th>Date</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render @tweets %>
+  </tbody>
+</table>
