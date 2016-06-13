@@ -1,28 +1,17 @@
 
-<h1>All of the tweets! <span id = "tweets-count"> <%=@tweets.count%> </h1>
 
-
+<div id = "todo">
 <%=form_for @tweet, remote: true do |f| %>
 
-  <%=f.text_area "content" %>
+  <%=f.text_area "content", placeholder: "What's new minion?" %>
   <br>
-  <%=f.submit "Tweet"%>
+  <%=f.submit "Tweet it!", class: "tweet_button"%>
 
 
 <%end%>
-
-<table id="tweets-container">
-  <thead>
-    <tr>
-      <th>ID</th>
-      <th>Content</th>
-      <th>Date</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
+<table id="tweets-container" style = "margin:0 auto;">
+ <tbody>
     <%= render @tweets %>
   </tbody>
 </table>
+</div>

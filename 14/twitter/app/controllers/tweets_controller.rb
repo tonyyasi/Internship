@@ -1,10 +1,11 @@
 class TweetsController < ApplicationController
 
 def index
-  @tweets = Tweet.all
+  @tweets = Tweet.order(id: :desc)
   @tweet = Tweet.new
 
 end
+
 
 def destroy
   @tweet = Tweet.find(params[:id])
@@ -13,15 +14,10 @@ def destroy
    #format.html {redirect_to tweet}
    format.js
    end
-  
+
 end
 
 def show
- @tweet = Tweet.find(params[:id])
-
-end
-
-def new
   @tweet = Tweet.new
 end
 
@@ -45,7 +41,7 @@ def update
   @tweet = Tweet.find(params[:id])
  @tweet.content = tweet_params[:content]
  if @tweet.save
-   redirect_to tweet_path(tweet)
+   redirect_to '/tweets'
  else
   render :edit
  end

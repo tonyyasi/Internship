@@ -1,8 +1,6 @@
 <tr id = "<%="#{tweet.id}" %>">
-  <td ><%= tweet.id %></td>
-  <td><%= tweet.content %></td>
-  <td><%= time_ago_in_words tweet.created_at %></td>
-  <td><%= link_to "Destroy", tweet_path(tweet), method: :delete, remote: true %></td>
-  <td><%= link_to "Show", tweet_path(tweet) %></td>
-  <td><%= link_to "Edit", edit_tweet_path(tweet) %></td>
+  <td> <div id = "content_and_time"> <%= tweet.content %>
+      <section id = "time">  <%= time_ago_in_words tweet.created_at %> ago </section> </div>
+    <div id = "destroy"> <%= button_to "", tweet_path(tweet), class: "destroy_button", method: :delete, remote: true %>
+     <%= button_to "", edit_tweet_path(tweet), class: "edit_button", method: :get  %> </div></td>
 </tr>
