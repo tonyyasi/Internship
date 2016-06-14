@@ -23,7 +23,8 @@ end
 
 def create
  @tweet = Tweet.new(tweet_params)
-    if @tweet.save
+ @user = User.first
+   if @user.tweets.create(content: @tweet.content).save
       respond_to do |format|
         format.html { redirect_to @tweet }
         format.js
