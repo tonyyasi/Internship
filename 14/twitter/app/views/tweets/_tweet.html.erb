@@ -1,6 +1,12 @@
 <tr id = "<%="#{tweet.id}" %>">
   <td> <div id = "content_and_time"> <%= tweet.content %>
-      <section id = "time">  <%= time_ago_in_words tweet.created_at %> ago </section> </div>
+    <section id = "time">  <%= time_ago_in_words tweet.created_at %> ago </section> </div>
+    <%if tweet.user == current_user%>
     <div id = "destroy"> <%= button_to "", tweet_path(tweet), class: "destroy_button", method: :delete, remote: true %>
-     <%= button_to "", edit_tweet_path(tweet), class: "edit_button", method: :get  %> </div></td>
+    <%= button_to "", edit_tweet_path(tweet), class: "edit_button", method: :get  %> </div>
+  <%end%>
+  <div class="posted">
+    Posted by: <%=tweet.user.email%>
+  </div>
+  </td>
 </tr>

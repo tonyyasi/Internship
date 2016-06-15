@@ -1,11 +1,13 @@
 class TweetsController < ApplicationController
 
 def index
-  @tweets = Tweet.order(id: :desc)
+  @tweets = Tweet.all
   @tweet = Tweet.new
 
 end
-
+def new
+  @tweet = Tweet.new
+end
 
 def destroy
   @tweet = Tweet.find(params[:id])
@@ -22,9 +24,8 @@ def show
 end
 
 def create
- @tweet = Tweet.new(tweet_params)
- @user = User.first
-   if @user.tweets.create(content: @tweet.content).save
+  @tweet = current_user.tweets.build(tweet_params)
+ if @tweet.save
       respond_to do |format|
         format.html { redirect_to @tweet }
         format.js

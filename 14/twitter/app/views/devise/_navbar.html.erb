@@ -1,0 +1,16 @@
+<ul class="nav-bar">
+  <li><%=link_to 'Tweets' , '/tweets'%></li>
+  <%if user_signed_in?%>
+  <li><%= link_to 'Log Out', destroy_user_session_path, method: :delete %>
+</li>
+  <li><%=link_to 'Edit' , 'users/edit'%></li>
+
+<%else%>
+  <li> <%=link_to 'Login' , new_user_session_path%></li>
+  <li><%=link_to 'Sign-up' , new_user_registration_path %></li>
+<%end%>
+<li class="info"> Hello, <%=current_user.email  if user_signed_in?%> </li>
+<li class="title">Twitterz</li>
+
+</ul>
+

@@ -1,7 +1,8 @@
 
 
 <div id = "todo">
-<%=form_for @tweet, remote: true do |f| %>
+  <%if user_signed_in? %>
+  <%=form_for @tweet, remote: true do |f| %>
 
   <%=f.text_area "content", placeholder: "What's new minion?" %>
   <br>
@@ -9,6 +10,11 @@
 
 
 <%end%>
+
+<%else%>
+  <h2>You must be logged in to tweet</h2>
+<%end%>
+
 <table id="tweets-container" style = "margin:0 auto;">
  <tbody>
     <%= render @tweets %>

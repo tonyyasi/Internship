@@ -12,6 +12,7 @@
  *
  *= require_tree .
  *= require_self
+ *= require styles.css
  */
 textarea#tweet_content{
     resize: none;
@@ -84,12 +85,20 @@ body {
     border: 0;
     padding:9px;
    }
+   input.destroy_button:hover{
+  cursor:pointer;
+   }
+
 
    input.edit_button {
     background:url('edit.png') no-repeat;
     border:0;
    /* padding:9px;*/
     margin-left: 40px;
+   }
+
+   input.edit_button:hover{
+    cursor: pointer;
    }
 
    input.destroy_button , input.edit_button {
@@ -116,4 +125,103 @@ left:0;
 div#todo{
 width: 460px;
 margin: 0 auto;
+}
+
+form.edit_user{
+
+  text-align: center;
+
+}
+
+div.field{
+margin-top:22px;
+}
+
+div.all_the_page{
+text-align: center;
+background-color:  #F3F9FE;
+}
+
+form.edit_user{
+background_color: #FFF
+
+}
+
+div.edit_forms{
+width: 400px;
+background-color: #e1e8ed;
+margin: 0 auto;
+padding: 25px;
+}
+
+input{
+border-radius:5px;
+}
+
+input.update_btn{
+
+  margin-top: 14px;
+
+}
+
+input#user_email , input#user_password , input#user_current_password , input#user_password_confirmation{
+  width: 180px;
+}
+
+.lower_part{
+  background-color: lightblue;
+  width: 280px;
+  margin: 0 auto;
+  height: 150px;
+  padding: 10px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #111;
+}
+
+li.info{
+float:right;
+color:white;
+ text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+
+}
+li.title{
+   display: block;
+    color: lightblue;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    float: right;
+    position: relative;
+  left: -50%;
+}
+
+div.posted{
+font-size: small;
+float: right;
+color:blue;
 }
