@@ -1,5 +1,11 @@
-class TweetsController < ApplicationController
 
+
+
+
+
+class TweetsController < ApplicationController
+  before_action :authenticate_user! , only: [:edit , :new, :destroy, :create, :update]
+  
 def index
   @tweets = Tweet.all
   @tweet = Tweet.new
@@ -49,7 +55,9 @@ def update
  end
 end
 
+
 private
+
 
 def tweet_params
   params.require(:tweet).permit(:content)
